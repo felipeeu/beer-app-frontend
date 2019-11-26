@@ -1,0 +1,30 @@
+schema {
+  query: RootQueryType
+}
+
+"""Represent the major group of beer"""
+type Group {
+  id: ID!
+  name: String!
+  description: String!
+}
+
+"""Schema Root"""
+type RootQueryType {
+  """The two major groups"""
+  groups: [Group]
+
+  """List of all styles"""
+  styles(group: String!): [Style]
+}
+
+"""Represent the styles of beers by group """
+type Style {
+  id: ID!
+  name: String!
+  abv: String!
+  ibu: String!
+  pair: String!
+  group: String!
+}
+

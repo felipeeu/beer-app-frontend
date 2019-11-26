@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import graphql from 'babel-plugin-relay/macro'
+import {QueryRenderer} from 'react-relay';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import environment from './environment'
+
+
+
+class App extends React.Component {
+  render() {
+    return (
+      <QueryRenderer
+        environment={environment}
+        query={graphql`
+        query AppQuery {
+       groups{
+            name 
+        }
+    }  
+      `}
+        variables={{}}
+        render={({error, props}) => {
+          if (error) {
+            console.log("ERROR >>>>: ",error)
+            // return <div>Error!</div>;
+          }
+          if (!props) {
+            return <div>Loading...</div>;
+          }
+          return <div>Hello World!</div>;
+          // return <div>User ID: {props.viewer.id}</div>;
+        }}
+      />
+    );
+  }
 }
 
 export default App;
