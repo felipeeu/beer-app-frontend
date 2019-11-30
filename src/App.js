@@ -3,10 +3,7 @@ import './App.css';
 import graphql from 'babel-plugin-relay/macro'
 import {QueryRenderer} from 'react-relay';
 
-
 import environment from './environment'
-
-
 
 class App extends React.Component {
   render() {
@@ -15,16 +12,16 @@ class App extends React.Component {
         environment={environment}
         query={graphql`
         query AppQuery {
-       groups{
-            name 
-        }
-    }  
+          groups {
+            name
+       }
+       }
       `}
         variables={{}}
         render={({error, props}) => {
           if (error) {
             console.log("ERROR >>>>: ",error)
-            // return <div>Error!</div>;
+            return <div>Error!</div>;
           }
           if (!props) {
             return <div>Loading...</div>;

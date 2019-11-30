@@ -1,5 +1,4 @@
-import  { Variables} from 'react-relay';
-import  { RequestNode } from 'relay-runtime';
+
 
 export const GRAPHQL_URL = 'http://localhost:4000/graphql';
 
@@ -12,10 +11,10 @@ const fetchQuery = async (request, variables) => {
   const headers = {
     Accept: 'application/json',
     'Content-type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
   };
 
   const response = await fetch(GRAPHQL_URL, {
-    mode: 'no-cors',
     method: 'POST',
     headers,
     body,
