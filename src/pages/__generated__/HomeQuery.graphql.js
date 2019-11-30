@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash ada12237a6695890633f589439425194
+ * @relayHash f766c0b182e609896699cb20036687b4
  */
 
 /* eslint-disable */
@@ -9,21 +9,21 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-export type AppQueryVariables = {||};
-export type AppQueryResponse = {|
+export type HomeQueryVariables = {||};
+export type HomeQueryResponse = {|
   +groups: ?$ReadOnlyArray<?{|
     +name: string
   |}>
 |};
-export type AppQuery = {|
-  variables: AppQueryVariables,
-  response: AppQueryResponse,
+export type HomeQuery = {|
+  variables: HomeQueryVariables,
+  response: HomeQueryResponse,
 |};
 */
 
 
 /*
-query AppQuery {
+query HomeQuery {
   groups {
     name
     id
@@ -43,7 +43,7 @@ return {
   "kind": "Request",
   "fragment": {
     "kind": "Fragment",
-    "name": "AppQuery",
+    "name": "HomeQuery",
     "type": "RootQueryType",
     "metadata": null,
     "argumentDefinitions": [],
@@ -64,7 +64,7 @@ return {
   },
   "operation": {
     "kind": "Operation",
-    "name": "AppQuery",
+    "name": "HomeQuery",
     "argumentDefinitions": [],
     "selections": [
       {
@@ -90,13 +90,13 @@ return {
   },
   "params": {
     "operationKind": "query",
-    "name": "AppQuery",
+    "name": "HomeQuery",
     "id": null,
-    "text": "query AppQuery {\n  groups {\n    name\n    id\n  }\n}\n",
+    "text": "query HomeQuery {\n  groups {\n    name\n    id\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '4a85e0b0e72029a7d02b873b75fbc613';
+(node/*: any*/).hash = '225e1ec590099120457d04a78e2ba418';
 module.exports = node;

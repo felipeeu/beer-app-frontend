@@ -1,37 +1,14 @@
 import React from 'react';
-import './App.css';
-import graphql from 'babel-plugin-relay/macro'
-import {QueryRenderer} from 'react-relay';
+import { BrowserRouter, Route } from "react-router-dom";
+import {GlobalStyle} from './styles/globalStyle'
+import { Home } from './pages/Home';
 
-import environment from './environment'
 
-class App extends React.Component {
-  render() {
-    return (
-      <QueryRenderer
-        environment={environment}
-        query={graphql`
-        query AppQuery {
-          groups {
-            name
-       }
-       }
-      `}
-        variables={{}}
-        render={({error, props}) => {
-          if (error) {
-            console.log("ERROR >>>>: ",error)
-            return <div>Error!</div>;
-          }
-          if (!props) {
-            return <div>Loading...</div>;
-          }
-          return <div>Hello World!</div>;
-          // return <div>User ID: {props.viewer.id}</div>;
-        }}
-      />
-    );
-  }
-}
+const App = () => (
+  <BrowserRouter>
+    <GlobalStyle />
+    <Route path="/" exact component={Home} />
+  </BrowserRouter>
+);
 
 export default App;
