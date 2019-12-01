@@ -3,12 +3,15 @@ import { BrowserRouter, Route } from "react-router-dom";
 import {GlobalStyle} from './styles/globalStyle'
 import { Home } from './pages/Home';
 import {Styles} from './pages/Styles'
-
+import {Cup} from './components/cup'
+import {Title} from './components/title'
 
 const App = () => (
   <BrowserRouter>
     <GlobalStyle />
-    <Route path="/" exact component={Home} />
+    <Title/>
+    <Cup/>
+    <Route path="/home" exact component={Home} />
     <Route path="/:groupName" exact component={Styles} />
   </BrowserRouter>
 );

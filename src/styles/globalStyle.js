@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
  
   body{
-    background: lavender; 
+    background: #EFEFEF; 
   }
   #root{
     height: 100%;
@@ -18,9 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     justify-content: center;
     display: flex; 
     flex-direction:column;     
-    ${'' /* position: absolute;
-    left: 25%;
-    right: 25%;      */}
+  
   }
 `;
 

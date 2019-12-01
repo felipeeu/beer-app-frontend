@@ -2,12 +2,14 @@ import React from "react";
 import graphql from "babel-plugin-relay/macro";
 import { QueryRenderer } from "react-relay";
 import  environment  from "../environment";
+import {StylesList} from "../components/stylesBeerList"
 
 
+//TODO Use propTypes
 
-export const Styles = () => {
-    return(
-
+export const Styles = (props) => {
+  return(
+    
     <QueryRenderer
         environment={environment}
         query={graphql`
@@ -20,18 +22,17 @@ export const Styles = () => {
             }
         }
       `}
-         variables={{groupName: "ale" }} //TODO indicar a variavel do grupo
+        variables={{groupName: props.match.params.groupName }} 
         render={({error, props}) => {
+         
           if (error) {
             return <div>Error!</div>;
           }
           if (!props) {
             return <div>Loading...</div>;
           }
-            console.log("PROPS", props)
           return (
-            // <Groups groups= {props.groups}/>
-          <div>Testando styles</div>
+           <StylesList styles={props.styles}/>
           );
         }}
       />

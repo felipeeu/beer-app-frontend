@@ -26,7 +26,6 @@ export const Home = () => {
           if (!props) {
             return <div>Loading...</div>;
           }
-            console.log("PROPS", props)
           return (
             <Groups groups= {props.groups}/>
           );
