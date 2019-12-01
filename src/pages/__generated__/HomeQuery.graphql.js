@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash f766c0b182e609896699cb20036687b4
+ * @relayHash af683629bcd24da6054b7cdd93d41084
  */
 
 /* eslint-disable */
@@ -12,7 +12,8 @@ import type { ConcreteRequest } from 'relay-runtime';
 export type HomeQueryVariables = {||};
 export type HomeQueryResponse = {|
   +groups: ?$ReadOnlyArray<?{|
-    +name: string
+    +name: string,
+    +description: string,
   |}>
 |};
 export type HomeQuery = {|
@@ -26,6 +27,7 @@ export type HomeQuery = {|
 query HomeQuery {
   groups {
     name
+    description
     id
   }
 }
@@ -36,6 +38,13 @@ var v0 = {
   "kind": "ScalarField",
   "alias": null,
   "name": "name",
+  "args": null,
+  "storageKey": null
+},
+v1 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "description",
   "args": null,
   "storageKey": null
 };
@@ -57,7 +66,8 @@ return {
         "concreteType": "Group",
         "plural": true,
         "selections": [
-          (v0/*: any*/)
+          (v0/*: any*/),
+          (v1/*: any*/)
         ]
       }
     ]
@@ -77,6 +87,7 @@ return {
         "plural": true,
         "selections": [
           (v0/*: any*/),
+          (v1/*: any*/),
           {
             "kind": "ScalarField",
             "alias": null,
@@ -92,11 +103,11 @@ return {
     "operationKind": "query",
     "name": "HomeQuery",
     "id": null,
-    "text": "query HomeQuery {\n  groups {\n    name\n    id\n  }\n}\n",
+    "text": "query HomeQuery {\n  groups {\n    name\n    description\n    id\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '225e1ec590099120457d04a78e2ba418';
+(node/*: any*/).hash = '53da5624a7a4c3c61c3e62c4012bc2d6';
 module.exports = node;

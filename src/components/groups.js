@@ -1,12 +1,15 @@
 import React from 'react'
-import {BeerGroup} from '../styles/beerGroup'
+import {BeerGroupCard, Info ,Title} from '../styles/beerGroup'
 
 
 export const Groups = ({groups}) => {
 
 return(
     groups.map((group, idx) => {
-        return <BeerGroup key ={idx}>{group.name}</BeerGroup>
+        return <BeerGroupCard key ={idx}>
+        <Title>{group.name}</Title>
+        <Info>{group.description}</Info>
+        </BeerGroupCard>
     })
 )
 }
