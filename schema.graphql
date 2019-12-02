@@ -26,5 +26,6 @@ type Style {
   ibu: String!
   pair: String!
   group: String!
+  img: String!
 }
 

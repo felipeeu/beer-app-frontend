@@ -6,7 +6,7 @@ export const BeerStylesCard= styled.div`
   flex-direction:column;
   align-items: center;
   width: 50vw;
-  height:30vh;
+  height:auto;
   margin: 10px;
   padding: 10px;
   background-color:#faf0e6;

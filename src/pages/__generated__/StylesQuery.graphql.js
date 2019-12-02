@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 3df008a2eb2363c2ff3f022aac16ae4b
+ * @relayHash 643514cfcf530eefe318f49f107e0cc9
  */
 
 /* eslint-disable */
@@ -18,6 +18,7 @@ export type StylesQueryResponse = {|
     +abv: string,
     +ibu: string,
     +pair: string,
+    +img: string,
   |}>
 |};
 export type StylesQuery = {|
@@ -36,6 +37,7 @@ query StylesQuery(
     abv
     ibu
     pair
+    img
     id
   }
 }
@@ -84,6 +86,13 @@ v5 = {
   "name": "pair",
   "args": null,
   "storageKey": null
+},
+v6 = {
+  "kind": "ScalarField",
+  "alias": null,
+  "name": "img",
+  "args": null,
+  "storageKey": null
 };
 return {
   "kind": "Request",
@@ -106,7 +115,8 @@ return {
           (v2/*: any*/),
           (v3/*: any*/),
           (v4/*: any*/),
-          (v5/*: any*/)
+          (v5/*: any*/),
+          (v6/*: any*/)
         ]
       }
     ]
@@ -129,6 +139,7 @@ return {
           (v3/*: any*/),
           (v4/*: any*/),
           (v5/*: any*/),
+          (v6/*: any*/),
           {
             "kind": "ScalarField",
             "alias": null,
@@ -144,11 +155,11 @@ return {
     "operationKind": "query",
     "name": "StylesQuery",
     "id": null,
-    "text": "query StylesQuery(\n  $groupName: String!\n) {\n  styles(group: $groupName) {\n    name\n    abv\n    ibu\n    pair\n    id\n  }\n}\n",
+    "text": "query StylesQuery(\n  $groupName: String!\n) {\n  styles(group: $groupName) {\n    name\n    abv\n    ibu\n    pair\n    img\n    id\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'ec4e2fe4d283c2b7d0fe8012e9a1fc51';
+(node/*: any*/).hash = '4f0540d05ee52b7f48a8d990811d8b49';
 module.exports = node;

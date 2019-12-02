@@ -21,6 +21,7 @@ return(
             <span>
             Harmonizações: {style.pair}
             </span>
+            <img src ={style.img} alt= 'beerimage'/>
             </BeerStylesCard>
         )
     })

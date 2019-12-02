@@ -19,12 +19,13 @@ export const Styles = (props) => {
                 abv
                 ibu
                 pair
+                img
             }
         }
       `}
         variables={{groupName: props.match.params.groupName }} 
         render={({error, props}) => {
-         
+          
           if (error) {
             return <div>Error!</div>;
           }
