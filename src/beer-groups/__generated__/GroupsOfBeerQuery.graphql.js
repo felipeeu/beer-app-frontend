@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash af683629bcd24da6054b7cdd93d41084
+ * @relayHash df0a3d15977808cf128fd15a0677661d
  */
 
 /* eslint-disable */
@@ -9,22 +9,22 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-export type HomeQueryVariables = {||};
-export type HomeQueryResponse = {|
+export type GroupsOfBeerQueryVariables = {||};
+export type GroupsOfBeerQueryResponse = {|
   +groups: ?$ReadOnlyArray<?{|
     +name: string,
     +description: string,
   |}>
 |};
-export type HomeQuery = {|
-  variables: HomeQueryVariables,
-  response: HomeQueryResponse,
+export type GroupsOfBeerQuery = {|
+  variables: GroupsOfBeerQueryVariables,
+  response: GroupsOfBeerQueryResponse,
 |};
 */
 
 
 /*
-query HomeQuery {
+query GroupsOfBeerQuery {
   groups {
     name
     description
@@ -52,7 +52,7 @@ return {
   "kind": "Request",
   "fragment": {
     "kind": "Fragment",
-    "name": "HomeQuery",
+    "name": "GroupsOfBeerQuery",
     "type": "RootQueryType",
     "metadata": null,
     "argumentDefinitions": [],
@@ -74,7 +74,7 @@ return {
   },
   "operation": {
     "kind": "Operation",
-    "name": "HomeQuery",
+    "name": "GroupsOfBeerQuery",
     "argumentDefinitions": [],
     "selections": [
       {
@@ -101,13 +101,13 @@ return {
   },
   "params": {
     "operationKind": "query",
-    "name": "HomeQuery",
+    "name": "GroupsOfBeerQuery",
     "id": null,
-    "text": "query HomeQuery {\n  groups {\n    name\n    description\n    id\n  }\n}\n",
+    "text": "query GroupsOfBeerQuery {\n  groups {\n    name\n    description\n    id\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '53da5624a7a4c3c61c3e62c4012bc2d6';
+(node/*: any*/).hash = '08574343d7e19726f9a3070f72cbfe01';
 module.exports = node;

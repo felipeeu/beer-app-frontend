@@ -1,17 +1,17 @@
 import React from "react";
 import graphql from "babel-plugin-relay/macro";
 import { QueryRenderer } from "react-relay";
-import  environment  from "../environment";
-import {Groups} from "../components/groups"
+import  environment  from "../relay/environment";
+import {Groups} from "./groups"
 
 
-export const Home = () => {
+export const GroupsOfBeer = () => {
     return(
 
     <QueryRenderer
         environment={environment}
         query={graphql`
-        query HomeQuery {
+        query GroupsOfBeerQuery {
           groups {
             name
             description

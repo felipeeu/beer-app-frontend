@@ -1,6 +1,10 @@
 import React from 'react'
-import {TitleStyled} from '../styles/titleStyle'
+import styled from "styled-components";
 
+ const TitleStyled = styled.h1`
+  color: #d6abab;
+  font-family: monospace;
+`;
 
 export const Title = () => (
     

@@ -1,19 +1,19 @@
 import React from "react";
 import graphql from "babel-plugin-relay/macro";
 import { QueryRenderer } from "react-relay";
-import  environment  from "../environment";
-import {StylesList} from "../components/stylesBeerList"
+import  environment  from "../relay/environment";
+import {StylesList} from "./stylesBeerList"
 
 
 //TODO Use propTypes
 
-export const Styles = (props) => {
+export const StylesOfBeer = (props) => {
   return(
     
     <QueryRenderer
         environment={environment}
         query={graphql`
-        query StylesQuery($groupName:String!) {
+        query StylesOfBeerQuery($groupName:String!) {
             styles(group: $groupName) {
                 name
                 abv

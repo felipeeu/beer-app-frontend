@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 643514cfcf530eefe318f49f107e0cc9
+ * @relayHash 26c42b0623d6d56a9d813430ba7d30f4
  */
 
 /* eslint-disable */
@@ -9,10 +9,10 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-export type StylesQueryVariables = {|
+export type StylesOfBeerQueryVariables = {|
   groupName: string
 |};
-export type StylesQueryResponse = {|
+export type StylesOfBeerQueryResponse = {|
   +styles: ?$ReadOnlyArray<?{|
     +name: string,
     +abv: string,
@@ -21,15 +21,15 @@ export type StylesQueryResponse = {|
     +img: string,
   |}>
 |};
-export type StylesQuery = {|
-  variables: StylesQueryVariables,
-  response: StylesQueryResponse,
+export type StylesOfBeerQuery = {|
+  variables: StylesOfBeerQueryVariables,
+  response: StylesOfBeerQueryResponse,
 |};
 */
 
 
 /*
-query StylesQuery(
+query StylesOfBeerQuery(
   $groupName: String!
 ) {
   styles(group: $groupName) {
@@ -98,7 +98,7 @@ return {
   "kind": "Request",
   "fragment": {
     "kind": "Fragment",
-    "name": "StylesQuery",
+    "name": "StylesOfBeerQuery",
     "type": "RootQueryType",
     "metadata": null,
     "argumentDefinitions": (v0/*: any*/),
@@ -123,7 +123,7 @@ return {
   },
   "operation": {
     "kind": "Operation",
-    "name": "StylesQuery",
+    "name": "StylesOfBeerQuery",
     "argumentDefinitions": (v0/*: any*/),
     "selections": [
       {
@@ -153,13 +153,13 @@ return {
   },
   "params": {
     "operationKind": "query",
-    "name": "StylesQuery",
+    "name": "StylesOfBeerQuery",
     "id": null,
-    "text": "query StylesQuery(\n  $groupName: String!\n) {\n  styles(group: $groupName) {\n    name\n    abv\n    ibu\n    pair\n    img\n    id\n  }\n}\n",
+    "text": "query StylesOfBeerQuery(\n  $groupName: String!\n) {\n  styles(group: $groupName) {\n    name\n    abv\n    ibu\n    pair\n    img\n    id\n  }\n}\n",
     "metadata": {}
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '4f0540d05ee52b7f48a8d990811d8b49';
+(node/*: any*/).hash = '7a8ff246c2540c15bf197ec60d054ddd';
 module.exports = node;
