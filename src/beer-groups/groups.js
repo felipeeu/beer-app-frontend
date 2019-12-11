@@ -19,10 +19,11 @@ import {Link} from 'react-router-dom'
  const Info = styled.span`
   padding: 20px;
   overflow:auto;
+  text-align: justify;
 `;
 
 const Title = styled.h1`
-  color:red;
+  color:#c5820b;
 `;
 
 

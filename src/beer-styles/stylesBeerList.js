@@ -5,13 +5,14 @@ import styled from "styled-components";
 
  const BeerStylesCard= styled.div`
 
-  display: flex;
-  flex-direction:column;
+  /* display: flex;
+  flex-direction:column; */
   align-items: center;
-  width: 50vw;
+  /* width: 50vw;
   height:auto;
-  margin: 10px;
-  padding: 10px;
+  margin: 10px;*/
+  padding: 10px; 
+  margin-top:10px;
   background-color:#faf0e6;
   color: #495057;
   border: 2px;
