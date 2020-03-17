@@ -10,7 +10,12 @@ cd beer-app-frontend
 yarn install
 yarn start
 ```
-
+### Open another terminal tab
+```terminal
+git clone https://github.com/felipeeu/beer-app-backend.git
+cd beer-app-backend
+node index.js
+```
 
 ## Technologies Used
 * JavaScript
